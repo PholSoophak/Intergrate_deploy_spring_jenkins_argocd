@@ -53,7 +53,7 @@ pipeline{
         }
         stage('Trigger ManifestUpdate') {
             steps {
-                    build job: 'intergrate_argocd_job1', parameters: [string(name: 'BUILDTAG', value: env.BUILD_NUMBER)]
+                    build job: 'manifest_argocd_job2', parameters: [string(name: 'BUILDTAG', value: env.BUILD_NUMBER)]
             }
         }
     }
